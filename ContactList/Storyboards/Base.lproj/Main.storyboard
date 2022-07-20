@@ -43,7 +43,7 @@
                     <tabBarItem key="tabBarItem" title="Person List v1" image="person.fill.turn.right" catalog="system" id="DcD-2i-kv3"/>
                     <navigationItem key="navigationItem" title="Person List" id="N8h-gl-557"/>
                     <connections>
-                        <segue destination="m2U-n6-6Oa" kind="show" identifier="showDetails" id="9HV-eF-tLf"/>
+                        <segue destination="m2U-n6-6Oa" kind="show" identifier="showDetails" id="nZZ-hy-2dc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOF-Dt-2HS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -85,6 +85,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name Surname" id="dI4-9v-Ltg"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="wD0-hh-eBe" id="SMb-GZ-X0L"/>
+                        <outlet property="phoneLabel" destination="zMz-5W-c0z" id="Fiw-wx-wAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRQ-OG-2dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,19 +110,20 @@
             </objects>
             <point key="canvasLocation" x="-514" y="22"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Persons List-->
         <scene sceneID="m0c-sJ-N2R">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QNE-Dg-vcf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Wvl-gC-Gfh"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="Wvl-gC-Gfh"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ubb-Aj-yap">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BFH-QB-AZl" kind="relationship" relationship="viewControllers" id="Xde-eR-JGk"/>
-                        <segue destination="eOf-Hb-d7R" kind="relationship" relationship="viewControllers" id="jfl-Fx-xA8"/>
+                        <segue destination="eOf-Hb-d7R" kind="relationship" relationship="viewControllers" id="dbe-0K-3bc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17n-qG-WCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -128,7 +133,7 @@
         <!--Person List-->
         <scene sceneID="bzy-w5-r3a">
             <objects>
-                <tableViewController id="eOf-Hb-d7R" sceneMemberID="viewController">
+                <tableViewController id="eOf-Hb-d7R" customClass="PersonListViewControllerV2" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6k5-r4-T4q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

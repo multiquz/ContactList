@@ -9,21 +9,15 @@ import UIKit
 
 class PersonalDetailsViewController: UIViewController {
 
+    @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        phoneLabel.text = "phone: \(person.phoneNumber)"
+        emailLabel.text = "email: \(person.email)"
+        title = "\(person.firstName) \(person.lastName)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
