@@ -13,6 +13,10 @@
 		CECCB2C02888313600D06CA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECCB2BE2888313600D06CA8 /* Main.storyboard */; };
 		CECCB2C22888313800D06CA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECCB2C12888313800D06CA8 /* Assets.xcassets */; };
 		CECCB2C52888313800D06CA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECCB2C32888313800D06CA8 /* LaunchScreen.storyboard */; };
+		CECCB2CD2888317E00D06CA8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCB2CC2888317E00D06CA8 /* DataStore.swift */; };
+		CECCB2CF2888318C00D06CA8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCB2CE2888318C00D06CA8 /* Person.swift */; };
+		CECCB2D72888342B00D06CA8 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCB2D62888342B00D06CA8 /* PersonListViewController.swift */; };
+		CECCB2D9288836CC00D06CA8 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCB2D8288836CC00D06CA8 /* PersonalDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		CECCB2C12888313800D06CA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECCB2C42888313800D06CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECCB2C62888313800D06CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECCB2CC2888317E00D06CA8 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		CECCB2CE2888318C00D06CA8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		CECCB2D62888342B00D06CA8 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		CECCB2D8288836CC00D06CA8 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonalDetailsViewController.swift; path = ContactList/Storyboards/PersonalDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		CECCB2B72888313600D06CA8 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				CECCB2B82888313600D06CA8 /* AppDelegate.swift */,
-				CECCB2BA2888313600D06CA8 /* SceneDelegate.swift */,
-				CECCB2BC2888313600D06CA8 /* ViewController.swift */,
-				CECCB2BE2888313600D06CA8 /* Main.storyboard */,
-				CECCB2C12888313800D06CA8 /* Assets.xcassets */,
-				CECCB2C32888313800D06CA8 /* LaunchScreen.storyboard */,
-				CECCB2C62888313800D06CA8 /* Info.plist */,
+				CECCB2D52888333100D06CA8 /* ViewControllers */,
+				CECCB2D2288832D200D06CA8 /* Storyboards */,
+				CECCB2D4288832FB00D06CA8 /* Model */,
+				CECCB2D02888328D00D06CA8 /* Services */,
+				CECCB2D3288832F400D06CA8 /* App */,
+				CECCB2D12888329B00D06CA8 /* Resources */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		CECCB2D02888328D00D06CA8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2CC2888317E00D06CA8 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CECCB2D12888329B00D06CA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2C12888313800D06CA8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CECCB2D2288832D200D06CA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2BE2888313600D06CA8 /* Main.storyboard */,
+				CECCB2C32888313800D06CA8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CECCB2D3288832F400D06CA8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2B82888313600D06CA8 /* AppDelegate.swift */,
+				CECCB2BA2888313600D06CA8 /* SceneDelegate.swift */,
+				CECCB2C62888313800D06CA8 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CECCB2D4288832FB00D06CA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2CE2888318C00D06CA8 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CECCB2D52888333100D06CA8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CECCB2D8288836CC00D06CA8 /* PersonalDetailsViewController.swift */,
+				CECCB2D62888342B00D06CA8 /* PersonListViewController.swift */,
+				CECCB2BC2888313600D06CA8 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECCB2CF2888318C00D06CA8 /* Person.swift in Sources */,
 				CECCB2BD2888313600D06CA8 /* ViewController.swift in Sources */,
+				CECCB2CD2888317E00D06CA8 /* DataStore.swift in Sources */,
+				CECCB2D72888342B00D06CA8 /* PersonListViewController.swift in Sources */,
+				CECCB2D9288836CC00D06CA8 /* PersonalDetailsViewController.swift in Sources */,
 				CECCB2B92888313600D06CA8 /* AppDelegate.swift in Sources */,
 				CECCB2BB2888313600D06CA8 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WVNY5GBN9S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WVNY5GBN9S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
