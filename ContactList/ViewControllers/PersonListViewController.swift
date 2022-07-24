@@ -11,10 +11,6 @@ class PersonListViewController: UITableViewController {
     
     private let personList = Person.getPerson()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,11 +37,6 @@ class PersonListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let personalDetailsVC = segue.destination as? PersonalDetailsViewController else { return }
         personalDetailsVC.person = sender as? Person
-        
-        /* if let personalDetailsVC = segue.destination as? PersonalDetailsViewController {
-         personalDetailsVC.person = sender as? Person
-         } else if let personalListVCV2 = segue.destination as? PersonListViewControllerV2 {
-         personalListVCV2.personList = sender as? [Person]
-         } */
+
     }
 }

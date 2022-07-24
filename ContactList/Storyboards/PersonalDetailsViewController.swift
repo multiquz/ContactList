@@ -18,6 +18,6 @@ class PersonalDetailsViewController: UIViewController {
         super.viewDidLoad()
         phoneLabel.text = "phone: \(person.phoneNumber)"
         emailLabel.text = "email: \(person.email)"
-        title = "\(person.firstName) \(person.lastName)"
+        title = person.fullName
     }
 }

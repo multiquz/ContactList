@@ -13,16 +13,20 @@ struct Person {
     let email: String
     let phoneNumber: String
     
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+    
     static func getPerson() -> [Person] {
         var personList: [Person] = []
         let dataStore = DataStore()
         
-        for _ in 0...dataStore.firstNames.count - 1 {
+        for _ in 0..<dataStore.firstNames.count {
             let person = Person(
-                firstName: dataStore.firstNames.remove(at: Int.random(in: 0...dataStore.firstNames.count - 1)),
-                lastName: dataStore.lastNames.remove(at: Int.random(in: 0...dataStore.lastNames.count - 1)),
-                email: dataStore.emails.remove(at: Int.random(in: 0...dataStore.emails.count - 1)),
-                phoneNumber: dataStore.phones.remove(at: Int.random(in: 0...dataStore.phones.count - 1))
+                firstName: dataStore.firstNames.remove(at: Int.random(in: 0..<dataStore.firstNames.count)),
+                lastName: dataStore.lastNames.remove(at: Int.random(in: 0..<dataStore.lastNames.count)),
+                email: dataStore.emails.remove(at: Int.random(in: 0..<dataStore.emails.count)),
+                phoneNumber: dataStore.phones.remove(at: Int.random(in: 0..<dataStore.phones.count))
             )
             
             personList.append(person)

@@ -7,12 +7,13 @@
 
 import UIKit
 
-class PersonListViewControllerV2: UITableViewController {
+class AlternativePersonListViewController: UITableViewController {
     
     var personList: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

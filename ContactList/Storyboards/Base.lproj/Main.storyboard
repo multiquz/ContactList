@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="BFH-QB-AZl" id="eLX-zZ-yIU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Person List v1" image="person.fill.turn.right" catalog="system" id="DcD-2i-kv3"/>
+                    <tabBarItem key="tabBarItem" title="Person List v1" image="person" catalog="system" id="DcD-2i-kv3"/>
                     <navigationItem key="navigationItem" title="Person List" id="N8h-gl-557"/>
                     <connections>
                         <segue destination="m2U-n6-6Oa" kind="show" identifier="showDetails" id="nZZ-hy-2dc"/>
@@ -133,7 +133,7 @@
         <!--Person List-->
         <scene sceneID="bzy-w5-r3a">
             <objects>
-                <tableViewController id="eOf-Hb-d7R" customClass="PersonListViewControllerV2" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="eOf-Hb-d7R" customClass="AlternativePersonListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6k5-r4-T4q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
                             <outlet property="delegate" destination="eOf-Hb-d7R" id="hPh-Uf-CGO"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Person List v2" image="person.fill.turn.left" catalog="system" id="FS2-ye-VUe"/>
+                    <tabBarItem key="tabBarItem" title="Person List v2" image="person.fill" catalog="system" id="FS2-ye-VUe"/>
                     <navigationItem key="navigationItem" title="Person List" id="Tvg-nc-C8m"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlP-M4-lzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -171,8 +171,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill.turn.left" catalog="system" width="128" height="107"/>
-        <image name="person.fill.turn.right" catalog="system" width="128" height="107"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
